@@ -19,6 +19,7 @@ def plot_line_1(ticker:str):
     fig= px.line(
         data.reset_index(),
         x= 'Date', y= ['Close', 'SMA', 'LMA'],
+        title= ticker,
         labels={'Close': 'Fechamento', 'Date': 'Data'},
         color_discrete_map = {
         'Close': 'black', 'SMA': 'blue', 'LMA': 'red'}
